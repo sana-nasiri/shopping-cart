@@ -1,0 +1,117 @@
+body {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* navbar */
+#navbar-custom {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.nav-icon {
+    font-size: 1.5rem;
+}
+
+.cart-btn {
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-items {
+    font-size: 1rem;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #48C1E0;
+    padding: 0 5px;
+    border-radius: 30%;
+    color: #fff;
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+}
+
+
+/* header */
+.header-title {
+    font-size: 3.2rem;
+}
+
+/* products */
+.products-section {
+    padding: 40px 0;
+}
+
+.card-img-top {
+    transition: 0.6s;
+}
+
+.card-img-top:hover {
+    transform: scale(1.08);
+}
+
+/* Off-Canvas  */
+
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background-color: #F6F6F6;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.9s;
+}
+
+.side-nav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000;
+    display: block;
+    transition: 0.5s;
+}
+
+.side-nav a:hover {
+    color: #0B91D4;
+}
+
+.side-nav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 390px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .side-nav {
+        padding-top: 15px;
+    }
+
+    .side-nav a {
+        font-size: 18px;
+    }
+}
+
+/* footer */
+footer {
+    background-color: #F4F4F4;
+}
+
+footer p {
+    font-size: 14px;
+}

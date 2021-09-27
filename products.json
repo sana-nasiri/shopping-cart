@@ -1,0 +1,11 @@
+{ 
+    "items" :[ 
+    {"id": "1","title": "Integer 5 ADV", "price" : 70, "image": "img/product-1.png"},
+    {"id": "2", "title": "Curabitur ligula ED6", "price" : 150, "image": "img/product-2.png"},
+    {"id": "3","title": "Volutpat RTS", "price" : 299, "image": "img/product-3.png"},
+    {"id": "4","title": "Aliquam 2020", "price" : 210, "image": "img/product-4.png"},
+    {"id": "5","title": "DiamPede 2 PRO", "price" : 160, "image": "img/product-5.png"},
+    {"id": "6","title": "Lobortis 3.5", "price" : 160, "image": "img/product-6.png"}
+    
+  ]
+}
