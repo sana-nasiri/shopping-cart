@@ -10,28 +10,29 @@ const cartItems = document.querySelector(".cart-items");
 
 let basketItems = JSON.parse(localStorage.getItem("CART")) || [];
 let basketData = JSON.parse(localStorage.getItem("cart"));
-let reload = 'true';
+let reload = 'true'; //avoid using global variables
 
 //Product class
 class Products {
     async getProducts() {
         const response = await fetch("products.json");
         const responseData = await response.json();
-        let products = responseData.items;
-
-        products.map((item) => {
-            const title = item.title;
-            const price = item.price;
-            const image = item.image;
-            const id = item.id;
-            return {
-                title,
-                price,
-                image,
-                id,
-            };
-        });
-        return products;
+        // "products.json" object only have variables that you parsed. so below function is unnecessary;
+        // but if return objects from servers has several items and you only need these variables. then you did a good job!
+                // let products = responseData.items.map((item) => {
+                    //  It's better to use ES6 destructuring;
+                //     const {title, price, image, id} = item;
+                //     console.log(item)
+                //     return {
+                //         title,
+                //         price,
+                //         image,
+                //         id,
+                //     };
+                // });
+                // return products;
+        // if parsing is unnecessary you can return response directily
+        return responseData.items
     }
 }
 
@@ -59,8 +60,8 @@ class UI {
 
     //add to Cart
     addToCart(id) {
-
-        if (basketData !== []) {
+        // condition "basketData !== []" always returns true because arrays are refrence type.
+        if (basketData && basketData.length !==0) {
             this.generateShopBasket();
         }
         const item = this.products.find((product) => product.id === id);
